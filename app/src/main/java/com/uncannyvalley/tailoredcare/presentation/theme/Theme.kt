@@ -1,6 +1,5 @@
-package com.uncannyvalley.tailoredcare.ui.theme
+package com.uncannyvalley.tailoredcare.presentation.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

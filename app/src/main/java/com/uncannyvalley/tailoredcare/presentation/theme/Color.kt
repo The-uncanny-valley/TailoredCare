@@ -1,4 +1,4 @@
-package com.uncannyvalley.tailoredcare.ui.theme
+package com.uncannyvalley.tailoredcare.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
