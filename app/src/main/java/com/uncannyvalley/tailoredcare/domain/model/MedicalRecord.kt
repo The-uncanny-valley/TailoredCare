@@ -10,5 +10,5 @@ data class MedicalRecord(
     val diagnosis: String?,
     val treatment: String?,
     val recommendations: String?,
-    val doctorName: String
+    val doctorId: Long
 )
