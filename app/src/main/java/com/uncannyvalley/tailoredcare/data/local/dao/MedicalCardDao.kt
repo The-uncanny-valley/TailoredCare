@@ -22,7 +22,7 @@ interface MedicalCardDao {
     suspend fun delete(card: MedicalCardEntity)
 
     @Query("SELECT * FROM medical_cards WHERE id = :id")
-    suspend fun getById(id: Long)
+    suspend fun getById(id: Long): MedicalCardEntity?
 
     @Query("SELECT * FROM medical_cards ORDER BY petName")
     fun observeALl(): Flow<List<MedicalCardEntity>>
