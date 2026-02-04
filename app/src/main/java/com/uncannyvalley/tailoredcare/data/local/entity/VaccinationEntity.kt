@@ -1,11 +1,9 @@
-package com.uncannyvalley.tailoredcare.data.local
+package com.uncannyvalley.tailoredcare.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.uncannyvalley.tailoredcare.domain.model.VaccineType
-import java.time.LocalDate
 
 @Entity(
     tableName = "vaccinations",
