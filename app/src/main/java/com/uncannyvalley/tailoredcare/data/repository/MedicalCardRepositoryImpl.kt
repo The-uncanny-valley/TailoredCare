@@ -7,8 +7,9 @@ import com.uncannyvalley.tailoredcare.domain.model.MedicalCard
 import com.uncannyvalley.tailoredcare.domain.repository.MedicalCardRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class MedicalCardRepositoryImpl(
+class MedicalCardRepositoryImpl @Inject constructor(
     private val medicalCardDao: MedicalCardDao
 ) : MedicalCardRepository {
 
