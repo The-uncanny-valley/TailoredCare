@@ -14,5 +14,6 @@ data class MedicalCard(
     val isSterilized: Boolean,
     val origin: String?,
     val chipNumber: String?,
-    val createdAt: LocalDate
+    val createdAt: LocalDate,
+    val imageUri: String? = null
 )

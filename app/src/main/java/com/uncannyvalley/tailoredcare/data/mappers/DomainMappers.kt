@@ -31,7 +31,8 @@ fun MedicalCardEntity.toDomain(): MedicalCard = MedicalCard(
     isSterilized = isSterilized,
     chipNumber = chipNumber,
     origin = origin,
-    createdAt = LocalDate.parse(createdAt)
+    createdAt = LocalDate.parse(createdAt),
+    imageUri = imageUri
 )
 
 fun MedicalCard.toEntity(): MedicalCardEntity = MedicalCardEntity(
@@ -46,7 +47,8 @@ fun MedicalCard.toEntity(): MedicalCardEntity = MedicalCardEntity(
     isSterilized = isSterilized,
     chipNumber = chipNumber,
     origin = origin,
-    createdAt = createdAt.toString()
+    createdAt = createdAt.toString(),
+    imageUri = imageUri
 )
 
 fun OwnerEntity.toDomain(): Owner = Owner(

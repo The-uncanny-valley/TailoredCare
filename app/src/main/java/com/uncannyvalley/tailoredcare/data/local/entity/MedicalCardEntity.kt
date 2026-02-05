@@ -29,5 +29,6 @@ data class MedicalCardEntity(
     val isSterilized: Boolean,
     val origin: String?,
     val chipNumber: String?,
-    val createdAt: String
+    val createdAt: String,
+    val imageUri: String? = null
 )
