@@ -1,8 +1,8 @@
 # Tailored Care 🐾
 
-**Tailored Care** is an Android application currently in development, designed to help pet owners manage medical information and veterinary care for their pets in one place.
+**Tailored Care** is an Android application currently in development for an imaginary veterinary clinic, designed to manage patient records and streamline interaction between the clinic and pet owners.
 
-At its core, the app focuses on creating and storing digital medical cards for pets, with plans to expand into veterinary search and appointment booking features.
+At its core, the app focuses on creating and storing digital medical cards animal patients, with plans to expand into veterinary search and appointment booking within the clinic ecosystem..
 
 ## Project Status
 In active development, the presentation layer is not ready yet.
