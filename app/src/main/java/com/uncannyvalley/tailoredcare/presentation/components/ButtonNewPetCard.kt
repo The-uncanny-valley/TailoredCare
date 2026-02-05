@@ -37,8 +37,8 @@ fun ButtonNewPetCard(
 
     Card(
         modifier = modifier
-            .width(152.dp)
-            .height(95.dp)
+            .width(220.dp)
+            .height(136.dp)
             .clip(shape)
             .drawWithContent {
                 drawContent()
@@ -65,7 +65,7 @@ fun ButtonNewPetCard(
             .clickable(enabled = onClick != null) { onClick?.invoke() },
         shape = shape,
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
+            containerColor = MaterialTheme.colorScheme.background
         )
     ) {
         Box(
