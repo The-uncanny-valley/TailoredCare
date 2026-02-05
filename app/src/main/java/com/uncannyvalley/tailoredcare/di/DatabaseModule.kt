@@ -1,9 +1,9 @@
 package com.uncannyvalley.tailoredcare.di
 
 import android.content.Context
-import androidx.room.Database
 import androidx.room.Room
 import com.uncannyvalley.tailoredcare.data.local.dao.MedicalCardDao
+import com.uncannyvalley.tailoredcare.data.local.dao.OwnerDao
 import com.uncannyvalley.tailoredcare.data.local.dao.VaccinationDao
 import com.uncannyvalley.tailoredcare.data.local.database.AppDatabase
 import dagger.Module
@@ -36,4 +36,8 @@ object DatabaseModule {
     @Provides
     fun provideVaccinationDao(database: AppDatabase): VaccinationDao =
         database.vaccinationDao()
+
+    @Provides
+    fun provideOwnerDao(database: AppDatabase): OwnerDao =
+        database.ownerDao()
 }

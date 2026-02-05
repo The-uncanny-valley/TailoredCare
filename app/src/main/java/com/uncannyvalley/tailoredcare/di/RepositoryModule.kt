@@ -1,10 +1,13 @@
 package com.uncannyvalley.tailoredcare.di
 
 import com.uncannyvalley.tailoredcare.data.local.dao.MedicalCardDao
+import com.uncannyvalley.tailoredcare.data.local.dao.OwnerDao
 import com.uncannyvalley.tailoredcare.data.local.dao.VaccinationDao
 import com.uncannyvalley.tailoredcare.data.repository.MedicalCardRepositoryImpl
+import com.uncannyvalley.tailoredcare.data.repository.OwnerRepositoryImpl
 import com.uncannyvalley.tailoredcare.data.repository.VaccinationRepositoryImpl
 import com.uncannyvalley.tailoredcare.domain.repository.MedicalCardRepository
+import com.uncannyvalley.tailoredcare.domain.repository.OwnerRepository
 import com.uncannyvalley.tailoredcare.domain.repository.VaccinationRepository
 import dagger.Module
 import dagger.Provides
@@ -29,5 +32,12 @@ object RepositoryModule {
         vaccinationDao: VaccinationDao
     ): VaccinationRepository =
         VaccinationRepositoryImpl(vaccinationDao)
+
+    @Provides
+    @Singleton
+    fun provideOwnerRepository(
+        ownerDao: OwnerDao
+    ): OwnerRepository =
+        OwnerRepositoryImpl(ownerDao)
 
 }
