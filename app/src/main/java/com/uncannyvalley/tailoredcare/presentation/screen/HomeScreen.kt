@@ -31,7 +31,8 @@ fun HomeScreen(
     uiState: HomeUiState,
     onNavigateCalendar: () -> Unit,
     onNavigateChat: () -> Unit,
-    onNavigateProfile: () -> Unit
+    onNavigateProfile: () -> Unit,
+    onNavigateNewPet: () -> Unit
 ) {
 
     Scaffold(
@@ -65,7 +66,7 @@ fun HomeScreen(
             if (uiState.petCards.isEmpty() || uiState.showAddButtonOnly) {
                 ButtonNewPetCard(
                     modifier = Modifier.align(Alignment.Start),
-                    onClick = { /* handle click */ }
+                    onClick = onNavigateNewPet
                 )
             } else {
                 LazyRow(
@@ -75,7 +76,9 @@ fun HomeScreen(
                         PetCard(pet = pet, onClick = { /* handle click */ })
                     }
                     item {
-                        ButtonNewPetCard(onClick = { /* handle click */ })
+                        ButtonNewPetCard(
+                            onClick = onNavigateNewPet
+                        )
                     }
                 }
             }
@@ -112,7 +115,8 @@ fun HomeScreenPreview_pets() {
             uiState = sampleUiStateWithPets,
             onNavigateCalendar = {},
             onNavigateChat = {},
-            onNavigateProfile = {}
+            onNavigateProfile = {},
+            onNavigateNewPet = {}
         )
     }
 }
@@ -133,7 +137,8 @@ fun HomeScreenPreview_no_pets() {
             uiState = sampleUiStateNoPets,
             onNavigateCalendar = {},
             onNavigateChat = {},
-            onNavigateProfile = {}
+            onNavigateProfile = {},
+            onNavigateNewPet = {}
         )
     }
 }
@@ -160,7 +165,8 @@ fun HomeScreenPreview_pet() {
             uiState = sampleUiStateWithPets,
             onNavigateCalendar = {},
             onNavigateChat = {},
-            onNavigateProfile = {}
+            onNavigateProfile = {},
+            onNavigateNewPet = {}
         )
     }
 }

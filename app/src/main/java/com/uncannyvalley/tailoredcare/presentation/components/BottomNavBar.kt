@@ -107,7 +107,8 @@ fun HomeScreenPreview_() {
             uiState = sampleUiStateNoPets,
             onNavigateCalendar = {},
             onNavigateChat = {},
-            onNavigateProfile = {}
+            onNavigateProfile = {},
+            onNavigateNewPet = {}
         )
     }
 }
