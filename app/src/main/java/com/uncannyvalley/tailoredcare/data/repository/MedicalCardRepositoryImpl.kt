@@ -14,11 +14,11 @@ class MedicalCardRepositoryImpl @Inject constructor(
 ) : MedicalCardRepository {
 
     override fun observeMedicalCards(): Flow<List<MedicalCard>> =
-        medicalCardDao.observeALl()
+        medicalCardDao.observeAll()
             .map { list -> list.map { it.toDomain() } }
 
     override fun observeMedicalCardByOwner(ownerId: Long): Flow<List<MedicalCard>> =
-        medicalCardDao.observerByOwner(ownerId)
+        medicalCardDao.observeByOwner(ownerId)
             .map { list -> list.map { it.toDomain() } }
 
     override suspend fun getMedicalCardById(id: Long): MedicalCard? =

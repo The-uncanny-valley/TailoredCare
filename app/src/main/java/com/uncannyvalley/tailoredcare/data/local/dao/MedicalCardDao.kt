@@ -25,8 +25,8 @@ interface MedicalCardDao {
     suspend fun getById(id: Long): MedicalCardEntity?
 
     @Query("SELECT * FROM medical_cards ORDER BY petName")
-    fun observeALl(): Flow<List<MedicalCardEntity>>
+    fun observeAll(): Flow<List<MedicalCardEntity>>
 
     @Query("SELECT * FROM medical_cards WHERE ownerId = :ownerId")
-    fun observerByOwner(ownerId: Long): Flow<List<MedicalCardEntity>>
+    fun observeByOwner(ownerId: Long): Flow<List<MedicalCardEntity>>
 }
