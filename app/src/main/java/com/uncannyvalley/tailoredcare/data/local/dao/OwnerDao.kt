@@ -22,7 +22,7 @@ interface OwnerDao {
     suspend fun delete(owner: OwnerEntity)
 
     @Query("SELECT * FROM owners WHERE id = :id")
-    suspend fun getById(id: Long): OwnerEntity
+    suspend fun getById(id: Long): OwnerEntity?
 
     @Query("SELECT * FROM owners ORDER BY fullName")
     fun observeOwners(): Flow<List<OwnerEntity>>

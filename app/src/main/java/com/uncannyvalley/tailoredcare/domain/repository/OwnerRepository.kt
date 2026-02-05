@@ -9,7 +9,7 @@ interface OwnerRepository {
 
     suspend fun getOwnerById(id: Long): Owner?
 
-    suspend fun addOwner(owner: Owner)
+    suspend fun addOwner(owner: Owner): Long
 
     suspend fun updateOwner(owner: Owner)
 
