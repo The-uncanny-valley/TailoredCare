@@ -76,4 +76,7 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     annotationProcessor(libs.hilt.compiler)
+
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }
