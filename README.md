@@ -6,17 +6,21 @@ At its core, the app focuses on creating and storing digital medical cards anima
 
 ## Project Status
 
-At the moment, the main functionality available is:
+At the moment, users can add a pet with all relevant information and view this information later.
 
-Users can add a pet with all relevant information and view this information later.
+User authorization is not yet implemented. Currently, the app creates a default user automatically.
 
-Other features are planned but not yet implemented:
+## Screenshots
 
-- Booking appointments
-- Searching for doctors
-- User authorization
-
-Currently, the app creates a default user automatically.
+<table>
+  <tr>
+    <td><img src="media/home_screen_no_pets_light.png" alt="Home Screen (Light)" width="200"/></td>
+    <td><img src="media/home_screen_pets_light.png" alt="Home Screen (Light)" width="200"/></td>
+    <td><img src="media/new_pet_step1_light.png" alt="New Pet Screen (Light)" width="200"/></td>
+    <td><img src="media/new_pet_step_2_light.png" alt="New Pet Screen (Light)" width="200"/></td>    
+    <td><img src="media/pet_info_light.png" alt="Pet Medical Card (Light)" width="200"/></td>    
+  </tr>
+</table>
 
 ## Planned Features
 
