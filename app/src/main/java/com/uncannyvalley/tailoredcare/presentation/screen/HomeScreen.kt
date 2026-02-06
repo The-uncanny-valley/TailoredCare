@@ -32,7 +32,8 @@ fun HomeScreen(
     onNavigateCalendar: () -> Unit,
     onNavigateChat: () -> Unit,
     onNavigateProfile: () -> Unit,
-    onNavigateNewPet: () -> Unit
+    onNavigateNewPet: () -> Unit,
+    onNavigatePet: (Long) -> Unit
 ) {
 
     Scaffold(
@@ -73,7 +74,10 @@ fun HomeScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     items(uiState.petCards) { pet ->
-                        PetCard(pet = pet, onClick = { /* handle click */ })
+                        PetCard(
+                            pet = pet,
+                            onClick = { onNavigatePet(pet.id) }
+                        )
                     }
                     item {
                         ButtonNewPetCard(
@@ -116,7 +120,8 @@ fun HomeScreenPreview_pets() {
             onNavigateCalendar = {},
             onNavigateChat = {},
             onNavigateProfile = {},
-            onNavigateNewPet = {}
+            onNavigateNewPet = {},
+            onNavigatePet = {}
         )
     }
 }
@@ -138,7 +143,8 @@ fun HomeScreenPreview_no_pets() {
             onNavigateCalendar = {},
             onNavigateChat = {},
             onNavigateProfile = {},
-            onNavigateNewPet = {}
+            onNavigateNewPet = {},
+            onNavigatePet = {}
         )
     }
 }
@@ -166,7 +172,8 @@ fun HomeScreenPreview_pet() {
             onNavigateCalendar = {},
             onNavigateChat = {},
             onNavigateProfile = {},
-            onNavigateNewPet = {}
+            onNavigateNewPet = {},
+            onNavigatePet = {}
         )
     }
 }

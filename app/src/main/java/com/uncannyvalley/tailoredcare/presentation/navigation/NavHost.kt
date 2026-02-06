@@ -6,9 +6,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 
 @Composable
 fun AppNavHost(
@@ -26,7 +28,10 @@ fun AppNavHost(
                 onNavigateProfile = { navController.navigate(Screen.ProfileScreen.route) },
                 onNavigateChat = { navController.navigate(Screen.ChatScreen.route) },
                 onNavigateCalendar = { navController.navigate(Screen.CalendarScreen.route) },
-                onNavigateNewPet = { navController.navigate(Screen.NewPetScreen.route) }
+                onNavigateNewPet = { navController.navigate(Screen.NewPetScreen.route) },
+                onNavigatePet = { petId ->
+                    navController.navigate(Screen.PetInfoScreen.createRoute(petId))
+                }
             )
         }
         composable(Screen.CalendarScreen.route) {
@@ -59,6 +64,17 @@ fun AppNavHost(
             NewPetRoute(
                 onBack = {},
                 onFinish = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.PetInfoScreen.route,
+            arguments = listOf(navArgument("petId") { type = NavType.LongType })
+        ) { backStackEntry ->
+            val petId = backStackEntry.arguments?.getLong("petId") ?: 0L
+            PetInfoRoute(
+                petId = petId,
+                onBack = { navController.popBackStack() }
             )
         }
     }

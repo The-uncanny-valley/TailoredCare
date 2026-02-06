@@ -108,7 +108,8 @@ fun HomeScreenPreview_() {
             onNavigateCalendar = {},
             onNavigateChat = {},
             onNavigateProfile = {},
-            onNavigateNewPet = {}
+            onNavigateNewPet = {},
+            onNavigatePet = {}
         )
     }
 }
