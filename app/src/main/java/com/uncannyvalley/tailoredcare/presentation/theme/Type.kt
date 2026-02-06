@@ -35,6 +35,12 @@ val Typography = Typography(
         letterSpacing = 0.02.sp
     ),
 
+    labelMedium = TextStyle(
+        fontFamily = Poppins,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
+    ),
+
     titleMedium = TextStyle(
         fontFamily = Poppins,
         fontWeight = FontWeight.SemiBold,
@@ -42,6 +48,13 @@ val Typography = Typography(
         lineHeight = 32.sp,
         letterSpacing = 0.sp
     ),
+
+    titleSmall = TextStyle(
+        fontFamily = Poppins,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 16.sp,
+        letterSpacing = 0.sp
+    )
     /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
