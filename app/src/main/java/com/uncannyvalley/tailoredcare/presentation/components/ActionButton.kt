@@ -1,5 +1,6 @@
 package com.uncannyvalley.tailoredcare.presentation.components
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -36,9 +37,10 @@ fun ActionButton(
         enabled = state.isStepValid,
         shape = shape,
         colors = colors,
+        contentPadding = PaddingValues(vertical = 16.dp),
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(24.dp)
     ) {
         Text(
             text = if (state.currentStep < state.maxStep) "Continue" else "Save",
