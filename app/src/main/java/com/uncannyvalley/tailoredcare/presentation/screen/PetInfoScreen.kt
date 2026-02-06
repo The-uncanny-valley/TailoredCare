@@ -25,9 +25,14 @@ fun PetInfoScreen(
     pet: MedicalCard?,
     onBack: () -> Unit
 ) {
-    Column(modifier = Modifier
+    Column(
+        modifier = Modifier
         .fillMaxSize()
-        .padding(32.dp)) {
+        .padding(
+            horizontal = 32.dp,
+            vertical = 46.dp
+        )
+    ) {
         Text(
             text = pet?.petName ?: "Pet Info",
             style = MaterialTheme.typography.labelLarge.copy(

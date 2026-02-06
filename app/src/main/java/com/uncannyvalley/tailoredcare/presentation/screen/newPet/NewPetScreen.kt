@@ -26,7 +26,7 @@ fun NewPetScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 24.dp, bottom = 24.dp)
+            .padding(top = 36.dp, bottom = 24.dp)
     ) {
 
         Stepper(
