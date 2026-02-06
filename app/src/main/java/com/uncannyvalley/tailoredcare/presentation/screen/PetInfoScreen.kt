@@ -9,8 +9,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.uncannyvalley.tailoredcare.domain.model.Gender
 import com.uncannyvalley.tailoredcare.domain.model.MedicalCard
+import com.uncannyvalley.tailoredcare.domain.model.PetType
+import com.uncannyvalley.tailoredcare.presentation.theme.TailoredCareTheme
+import java.time.LocalDate
 
 @Composable
 fun PetInfoScreen(
@@ -38,5 +43,41 @@ fun PetInfoScreen(
                 textAlign = TextAlign.Center
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PetInfoScreenPreview() {
+    val samplePet = MedicalCard(
+        petName = "Buddy",
+        petType = PetType.DOG,
+        breed = "Golden Retriever",
+        gender = Gender.MALE,
+        birthDate = LocalDate.of(2020, 6, 15),
+        weightKg = 30.5,
+        isSterilized = true,
+        ownerId = 1L,
+        origin = "",
+        chipNumber = "",
+        createdAt = LocalDate.now(),
+    )
+
+    TailoredCareTheme() {
+        PetInfoScreen(
+            pet = samplePet,
+            onBack = {}
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PetInfoScreenEmptyPreview() {
+    TailoredCareTheme() {
+        PetInfoScreen(
+            pet = null,
+            onBack = {}
+        )
     }
 }
