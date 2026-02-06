@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -22,7 +23,11 @@ fun Stepper(
         Text(
             text = "Step $currentStep of $maxStep",
             style = MaterialTheme.typography.labelMedium,
-            modifier = Modifier.padding(bottom = 8.dp)
+            textAlign = TextAlign.Center,
+            color = MaterialTheme.colorScheme.onSurface,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 6.dp)
         )
 
         // progress bar
