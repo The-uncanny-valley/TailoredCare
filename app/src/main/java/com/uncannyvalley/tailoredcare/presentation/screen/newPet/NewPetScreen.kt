@@ -23,7 +23,11 @@ fun NewPetScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 24.dp, bottom = 24.dp)
+    ) {
 
         Stepper(
             currentStep = uiState.currentStep,
