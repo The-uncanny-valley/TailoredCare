@@ -5,7 +5,18 @@
 At its core, the app focuses on creating and storing digital medical cards animal patients, with plans to expand into veterinary search and appointment booking within the clinic ecosystem..
 
 ## Project Status
-In active development, the presentation layer is not ready yet.
+
+At the moment, the main functionality available is:
+
+Users can add a pet with all relevant information and view this information later.
+
+Other features are planned but not yet implemented:
+
+- Booking appointments
+- Searching for doctors
+- User authorization
+
+Currently, the app creates a default user automatically.
 
 ## Planned Features
 
